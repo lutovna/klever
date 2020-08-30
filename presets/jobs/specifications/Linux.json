@@ -107,7 +107,7 @@
             "verifier profile": "reachability",
             "verifier": {
               "name": "CPAchecker",
-              "version": "trunk:31140"
+              "version": "trunk:34133"
             }
           }
         }
@@ -209,17 +209,18 @@
           "name": "RSG",
           "options": {"models": [
             "linux/drivers/usb/core/usb/message.c",
-            "linux/memory safety/memory.c"
+            "linux/memory safety/memory.c",
+            "linux/list/list.c"
           ]}
         },
         {"name": "Weaver"},
         {
           "name": "FVTP",
           "options": {
-            "verifier profile": "memory checking",
+            "verifier profile": "memory checking Linux64",
             "verifier": {
               "name": "CPAchecker",
-              "version": "trunk:31140"
+              "version": "trunk:34133"
             }
           }
         }
@@ -406,7 +407,7 @@
                 {"genericManual": {"enforce replacement": true}}
               ],
               "translation options": {
-                "self parallel processes": false,
+                "self parallel processes": true,
                 "do not skip signals": true,
                 "not self parallel processes": ["linux/insmod"],
                 "not self parallel processes from categories": ["usb"],
@@ -436,7 +437,7 @@
               "verifier profile": "race checking",
               "verifier": {
                 "name": "CPAchecker",
-                "version": "CPALockator-combat-mode:34381"
+                "version": "CPALockator-combat-mode:32435"
               },
               "result processing": {
                 "expect several witnesses": true,
@@ -509,7 +510,7 @@
                           "verifier profile": "reachability with heap arrays",
                           "verifier": {
                             "name": "CPAchecker",
-                            "version": "trunk:31140"
+                            "version": "trunk:34133"
                           }
                         }
                       }
@@ -836,7 +837,7 @@
                   "verifier profile": "reachability with function pointers",
                   "verifier": {
                     "name": "CPAchecker",
-                    "version": "trunk:31140"
+                    "version": "trunk:34133"
                   }
                 }
               }
@@ -864,7 +865,7 @@
                   "verifier profile": "reachability with heap arrays",
                   "verifier": {
                     "name": "CPAchecker",
-                    "version": "trunk:31140"
+                    "version": "trunk:34133"
                   }
                 }
               }
